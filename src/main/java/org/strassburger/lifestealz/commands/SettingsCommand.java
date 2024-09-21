@@ -342,25 +342,25 @@ public class SettingsCommand implements CommandExecutor, TabCompleter {
 
     private void throwUsageError(CommandSender sender) {
         Component msg = MessageUtils.getAndFormatMsg(false, "messages.usageError", "&cUsage: %usage%",
-                new MessageUtils.Replaceable("%usage%", "/lifestealz hearts <add | set | remove> <player> [amount]"));
+                new MessageUtils.Replaceable("%usage%", "/lifestealx hearts <add | set | remove> <player> [amount]"));
         sender.sendMessage(msg);
     }
 
     private void throwDataUsageError(CommandSender sender) {
         Component msg = MessageUtils.getAndFormatMsg(false, "messages.usageError", "&cUsage: %usage%",
-                new MessageUtils.Replaceable("%usage%", "/lifestealz data <import | export> <file>"));
+                new MessageUtils.Replaceable("%usage%", "/lifestealx data <import | export> <file>"));
         sender.sendMessage(msg);
     }
 
     private void throwGiveItemUsageError(CommandSender sender) {
         Component msg = MessageUtils.getAndFormatMsg(false, "messages.usageError", "&cUsage: %usage%",
-                new MessageUtils.Replaceable("%usage%", "/lifestealz giveItem <player> <item> [amount]"));
+                new MessageUtils.Replaceable("%usage%", "/lifestealx giveItem <player> <item> [amount]"));
         sender.sendMessage(msg);
     }
 
     private void throwRecipeUsageError(CommandSender sender) {
         Component msg = MessageUtils.getAndFormatMsg(false, "messages.usageError", "&cUsage: %usage%",
-                new MessageUtils.Replaceable("%usage%", "/lifestealz recipe <" + String.join(" | ", plugin.getRecipeManager().getRecipeIds()) + ">"));
+                new MessageUtils.Replaceable("%usage%", "/lifestealx recipe <" + String.join(" | ", plugin.getRecipeManager().getRecipeIds()) + ">"));
         sender.sendMessage(msg);
     }
 

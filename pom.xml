@@ -9,10 +9,10 @@
     <version>2.5.0-beta</version>
     <packaging>jar</packaging>
 
-    <name>LifeStealZ</name>
+    <name>LifeStealX</name>
 
-    <description>LifeStealZ - The Ultimate LifeSteal SMP Plugin!</description>
-    <url>https://github.com/KartoffelChipss/LifeStealZ</url>
+    <description>LifeStealX - The Ultimate LifeSteal SMP Plugin!</description>
+    <url>https://github.com/Its-Ario/LifeStealX</url>
 
     <licenses>
         <license>
