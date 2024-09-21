@@ -71,7 +71,7 @@ public class SettingsCommand implements CommandExecutor, TabCompleter {
     }
 
     private boolean handleReload(CommandSender sender) {
-        if (!sender.hasPermission("lifestealz.admin.reload")) {
+        if (!sender.hasPermission("lifestealx.admin.reload")) {
             throwPermissionError(sender);
             return false;
         }
@@ -84,19 +84,19 @@ public class SettingsCommand implements CommandExecutor, TabCompleter {
     }
 
     private boolean handleHelp(CommandSender sender) {
-        if (!sender.hasPermission("lifestealz.help")) {
+        if (!sender.hasPermission("lifestealx.help")) {
             throwPermissionError(sender);
             return false;
         }
 
-        StringBuilder helpMessage = new StringBuilder("<reset><!i><!b> \n&8----------------------------------------------------\n&c&lLifeStealZ &7help page<!b>\n&8----------------------------------------------------\n");
-        addHelpEntry(helpMessage, sender, "lifestealz.admin.reload", "/lifestealz reload", "- reload the config");
-        addHelpEntry(helpMessage, sender, "lifestealz.admin.setlife", "/lifestealz hearts", "- modify how many hearts a player has");
-        addHelpEntry(helpMessage, sender, "lifestealz.admin.giveitem", "/lifestealz giveItem", "- give other players custom items, such as hearts");
-        addHelpEntry(helpMessage, sender, "lifestealz.viewrecipes", "/lifestealz recipe", "- view all recipes");
-        addHelpEntry(helpMessage, sender, "lifestealz.admin.revive", "/revive", "- revive a player without a revive item");
-        addHelpEntry(helpMessage, sender, "lifestealz.admin.eliminate", "/eliminate", "- eliminate a player");
-        addHelpEntry(helpMessage, sender, "lifestealz.withdraw", "/withdrawheart", "- withdraw a heart");
+        StringBuilder helpMessage = new StringBuilder("<reset><!i><!b> \n&8----------------------------------------------------\n&c&lPashmak LifeSteal &7help page<!b>\n&8----------------------------------------------------\n");
+        addHelpEntry(helpMessage, sender, "lifestealx.admin.reload", "/lifesteal reload", "- reload the config");
+        addHelpEntry(helpMessage, sender, "lifestealx.admin.setlife", "/lifesteal hearts", "- modify how many hearts a player has");
+        addHelpEntry(helpMessage, sender, "lifestealx.admin.giveitem", "/lifesteal giveItem", "- give other players custom items, such as hearts");
+        addHelpEntry(helpMessage, sender, "lifestealx.viewrecipes", "/lifesteal recipe", "- view all recipes");
+        addHelpEntry(helpMessage, sender, "lifestealx.admin.revive", "/revive", "- revive a player without a revive item");
+        addHelpEntry(helpMessage, sender, "lifestealx.admin.eliminate", "/eliminate", "- eliminate a player");
+        addHelpEntry(helpMessage, sender, "lifestealx.withdraw", "/withdrawheart", "- withdraw a heart");
         helpMessage.append("\n&8----------------------------------------------------\n<reset><!i><!b> ");
 
         sender.sendMessage(MessageUtils.formatMsg(helpMessage.toString()));
@@ -110,7 +110,7 @@ public class SettingsCommand implements CommandExecutor, TabCompleter {
     }
 
     private boolean handleRecipe(CommandSender sender, String[] args) {
-        if (!sender.hasPermission("lifestealz.viewrecipes")) {
+        if (!sender.hasPermission("lifestealx.viewrecipes")) {
             throwPermissionError(sender);
             return false;
         }
@@ -139,7 +139,7 @@ public class SettingsCommand implements CommandExecutor, TabCompleter {
     }
 
     private boolean handleHearts(CommandSender sender, String[] args) {
-        if (!sender.hasPermission("lifestealz.admin.setlife")) {
+        if (!sender.hasPermission("lifestealx.admin.setlife")) {
             throwPermissionError(sender);
             return false;
         }
@@ -258,7 +258,7 @@ public class SettingsCommand implements CommandExecutor, TabCompleter {
     }
 
     private boolean handleGiveItem(CommandSender sender, String[] args) {
-        if (!sender.hasPermission("lifestealz.admin.giveitem")) {
+        if (!sender.hasPermission("lifestealx.admin.giveitem")) {
             throwPermissionError(sender);
             return false;
         }
@@ -313,7 +313,7 @@ public class SettingsCommand implements CommandExecutor, TabCompleter {
     }
 
     private boolean handleData(CommandSender sender, String[] args) {
-        if (!sender.hasPermission("lifestealz.managedata")) {
+        if (!sender.hasPermission("lifestealx.managedata")) {
             throwPermissionError(sender);
             return false;
         }
@@ -374,12 +374,12 @@ public class SettingsCommand implements CommandExecutor, TabCompleter {
         if (args.length == 1) {
             List<String>
                     availableOptions = new ArrayList<>();
-            if (sender.hasPermission("lifestealz.admin.reload")) availableOptions.add("reload");
-            if (sender.hasPermission("lifestealz.admin.setlife")) availableOptions.add("hearts");
-            if (sender.hasPermission("lifestealz.admin.giveitem")) availableOptions.add("giveItem");
-            if (sender.hasPermission("lifestealz.viewrecipes")) availableOptions.add("recipe");
-            if (sender.hasPermission("lifestealz.help")) availableOptions.add("help");
-            if (sender.hasPermission("lifestealz.managedata")) availableOptions.add("data");
+            if (sender.hasPermission("lifestealx.admin.reload")) availableOptions.add("reload");
+            if (sender.hasPermission("lifestealx.admin.setlife")) availableOptions.add("hearts");
+            if (sender.hasPermission("lifestealx.admin.giveitem")) availableOptions.add("giveItem");
+            if (sender.hasPermission("lifestealx.viewrecipes")) availableOptions.add("recipe");
+            if (sender.hasPermission("lifestealx.help")) availableOptions.add("help");
+            if (sender.hasPermission("lifestealx.managedata")) availableOptions.add("data");
             return availableOptions;
         } else if (args.length == 2) {
             if (args[0].equals("hearts")) {
@@ -388,7 +388,7 @@ public class SettingsCommand implements CommandExecutor, TabCompleter {
                 return null; // Suggest online player names
             } else if (args[0].equals("recipe")) {
                 return new ArrayList<>(plugin.getRecipeManager().getRecipeIds());
-            } else if (args[0].equals("data") && sender.hasPermission("lifestealz.managedata")) {
+            } else if (args[0].equals("data") && sender.hasPermission("lifestealx.managedata")) {
                 return List.of("export", "import");
             }
         } else if (args.length == 3) {
@@ -396,7 +396,7 @@ public class SettingsCommand implements CommandExecutor, TabCompleter {
                 return null; // Suggest online player names
             } else if (args[0].equals("giveItem")) {
                 return new ArrayList<>(plugin.getRecipeManager().getRecipeIds());
-            } else if (args[0].equals("data") && args[1].equals("import") && sender.hasPermission("lifestealz.managedata")) {
+            } else if (args[0].equals("data") && args[1].equals("import") && sender.hasPermission("lifestealx.managedata")) {
                 return getCSVFiles();
             }
         } else if (args.length == 4) {

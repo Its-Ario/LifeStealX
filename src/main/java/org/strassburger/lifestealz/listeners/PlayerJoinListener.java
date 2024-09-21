@@ -46,7 +46,7 @@ public class PlayerJoinListener implements Listener {
     }
 
     private void handleUnwhitelistedWorld(Player player) {
-        if ((player.hasPermission("lifestealz.admin.*") || player.isOp()) && !plugin.getConfig().getBoolean("suppressWhitelistMessage", false)) {
+        if ((player.hasPermission("lifestealx.admin.*") || player.isOp()) && !plugin.getConfig().getBoolean("suppressWhitelistMessage", false)) {
             player.sendMessage(MessageUtils.getAndFormatMsg(
                     false,
                     "unwhitelistedWorld",

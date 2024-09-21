@@ -80,7 +80,7 @@ public class ReviveCommand implements CommandExecutor, TabCompleter {
      */
     private boolean canRevive(CommandSender sender, PlayerData playerData, String bypassOption) {
         int maxRevives = plugin.getConfig().getInt("maxRevives");
-        boolean hasBypassPermission = sender.hasPermission("lifestealz.bypassrevivelimit");
+        boolean hasBypassPermission = sender.hasPermission("lifestealx.bypassrevivelimit");
 
         if (maxRevives != -1 && playerData.getHasbeenRevived() >= maxRevives &&
                 (!BYPASS_OPTION.equals(bypassOption) || !hasBypassPermission)) {
@@ -139,7 +139,7 @@ public class ReviveCommand implements CommandExecutor, TabCompleter {
 
     @Override
     public @Nullable List<String> onTabComplete(@NotNull CommandSender sender, @NotNull Command command, @NotNull String alias, String[] args) {
-        if (args.length == 2 && sender.hasPermission("lifestealz.bypassrevivelimit")) {
+        if (args.length == 2 && sender.hasPermission("lifestealx.bypassrevivelimit")) {
             return List.of(BYPASS_OPTION);
         }
         return null;

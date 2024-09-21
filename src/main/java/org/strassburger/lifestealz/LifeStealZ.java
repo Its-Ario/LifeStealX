@@ -35,7 +35,7 @@ public final class LifeStealZ extends JavaPlugin {
 
     @Override
     public void onLoad() {
-        getLogger().info("Loading LifeStealZ...");
+        getLogger().info("Loading LifeStealX For PashmakMC...");
         if (hasWorldGuard()) {
             getLogger().info("WorldGuard found! Enabling WorldGuard support...");
             worldGuardManager = new WorldGuardManager();
@@ -82,12 +82,12 @@ public final class LifeStealZ extends JavaPlugin {
             }
         }
 
-        getLogger().info("LifeStealZ enabled!");
+        getLogger().info("LifeStealX enabled!");
     }
 
     @Override
     public void onDisable() {
-        getLogger().info("LifeStealZ disabled!");
+        getLogger().info("LifeStealX disabled!");
     }
 
     public static LifeStealZ getInstance() {

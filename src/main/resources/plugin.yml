@@ -1,10 +1,9 @@
-name: LifeStealZ
+name: LifeStealX
 version: '${project.version}'
 main: org.strassburger.lifestealz.LifeStealZ
 api-version: '1.19'
-author: Kartoffelchips
-website: https://lsz.strassburger.dev/
-description: LifeStealZ - The Ultimate LifeSteal SMP Plugin!
+authors: [Kartoffelchips, ItsArio]
+description: LifeStealX - The Ultimate LifeSteal SMP Plugin!
 
 softdepend:
     - PlaceholderAPI
@@ -12,25 +11,25 @@ softdepend:
     - Geyser-Spigot
 
 commands:
-    lifestealz:
+    lifesteal:
         aliases:
-            - lsz
-        description: lifestealz admin commands
+            - ls
+        description: lifestealx admin commands
         permission-message: §cYou don't have permission to use this command!
     eliminate:
-        permission: lifestealz.admin.eliminate
+        permission: lifestealx.admin.eliminate
         description: eliminate a player
         permission-message: §cYou don't have permission to use this command!
     revive:
-        permission: lifestealz.admin.revive
+        permission: lifestealx.admin.revive
         description: revive a player
         permission-message: §cYou don't have permission to use this command!
     withdrawheart:
-        permission: lifestealz.withdraw
+        permission: lifestealx.withdraw
         description: withdraw a heart
         permission-message: §cYou don't have permission to use this command!
     hearts:
-        permission: lifestealz.viewhearts
+        permission: lifesteax.viewhearts
         description: view other players max hearts
         permission-message: §cYou don't have permission to use this command!
 

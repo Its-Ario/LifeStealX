@@ -1,7 +1,7 @@
-# LifeStealZ language file
+# LifeStealX language file
 # zh-CN - by 风血Wind_Blood
 
-prefix: "&8[&cLifeStealZ插件&8]"
+prefix: "&8[&cLifeStealX插件&8]"
 newVersionAvailable: "&7有新版本的LifestealZ插件可用! \n&c<click:OPEN_URL:https://modrinth.com/plugin/lifestealz/versions>https://modrinth.com/plugin/lifestealz/versions</click>"
 usageError: "&c使用方法: %usage%"
 noPermsError: "<red>你没有权限使用这个命令!"

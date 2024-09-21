@@ -1,7 +1,7 @@
-# LifeStealZ language file
+# LifeStealX language file
 # pl-PL - by Ernestozilla
 
-prefix: "&8[&cLifeStealZ&8]"
+prefix: "&8[&cLifeStealX&8]"
 newVersionAvailable: |-
   &7Dostępna jest nowa wersja pluginu LifeStealZ!
   &c<click:OPEN_URL:https://modrinth.com/plugin/lifestealz/versions>https://modrinth.com/plugin/lifestealz/versions</click>

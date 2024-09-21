@@ -63,7 +63,7 @@ public class InventoryClickListener implements Listener {
                     int page = pageInt != null ? pageInt : 1;
                     GuiManager.openReviveGui(player, page);
                 case PLAYER_HEAD:
-                    if (!player.hasPermission("lifestealz.revive")) {
+                    if (!player.hasPermission("lifestealx.revive")) {
                         throwPermissionError(player);
                         return;
                     }
@@ -116,7 +116,7 @@ public class InventoryClickListener implements Listener {
                     plugin.getWebHookManager().sendWebhookMessage(WebHookManager.WebHookType.REVIVE, targetPlayer.getName(), player.getName());
                     break;
                 case SKELETON_SKULL:
-                    if (!player.hasPermission("lifestealz.revive")) {
+                    if (!player.hasPermission("lifestealx.revive")) {
                         throwPermissionError(player);
                         return;
                     }

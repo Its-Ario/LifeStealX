@@ -1,9 +1,9 @@
-#     _      _  __        _____ _             _   ______
-#    | |    (_)/ _|      / ____| |           | | |___  /
-#    | |     _| |_ ___  | (___ | |_ ___  __ _| |    / /
-#    | |    | |  _/ _ \  \___ \| __/ _ \/ _` | |   / /
-#    | |____| | ||  __/  ____) | ||  __/ (_| | |  / /__
-#    |______|_|_| \___| |_____/ \__\___|\__,_|_| /_____|
+#     _      _  __        _____ _             _
+#    | |    (_)/ _|      / ____| |           | |
+#    | |     _| |_ ___  | (___ | |_ ___  __ _| |
+#    | |    | |  _/ _ \  \___ \| __/ _ \/ _` | |
+#    | |____| | ||  __/  ____) | ||  __/ (_| | |
+#    |______|_|_| \___| |_____/ \__\___|\__,_|_|
 
 # === COLOR CODES ===
 # This plugin supports old color codes like: &c, &l, &o, etc.
@@ -14,15 +14,10 @@
 
 # === GENERAL SETTINGS ===
 
-# If set to true, LifeStealZ will check for updates and let you know if there's a newer version
 checkForUpdates: true
 
-# Set the language to any code found in the "lang" folder (don't add the .yml extension)
-# You can add your own language files. Use https://github.com/KartoffelChipss/LifeStealZ/tree/main/src/main/resources/lang/en-US.yml as a template
-# If you want to help translating the plugin, please refer to this article: https://lsz.strassburger.dev/contributing/localization
 #  | en-US | de-DE | es-ES | fr-FR | cs-CZ | vi-VN | zh-CN | pl-PL | nl-NL
 lang: "en-US"
-
 
 # === WORLD SETTINGS ===
 
@@ -40,7 +35,6 @@ worlds:
 # Enable to remove the warning message when a world is not whitelisted.
 supressWhitelistMessage: false
 
-
 # === HEART SETTINGS ===
 
 # The amount of hearts a player has, when joining for the first time
@@ -55,7 +49,7 @@ minHearts: 0
 # This option will enforce the heart limit on admin commands like /lifestealz hearts <add, set> <player> <amount>
 enforceMaxHeartsOnAdminCommands: false
 # The custom item that should be dropped if a player is killed (Must be an id from the items.yml)
-heartItem: "defaultheart"
+heartItem: "heart"
 
 
 # === HEART BEHAVIOR SETTINGS ===

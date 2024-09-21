@@ -1,7 +1,7 @@
-# LifeStealZ language file
+# LifeStealX language file
 # en-US - by Kartoffelchipss
 
-prefix: "&8[&cLifeStealZ&8]"
+prefix: "&8[&cLifeStealX&8]"
 newVersionAvailable: "&7A new version of LifeStealZ is available!\n&c<click:OPEN_URL:https://modrinth.com/plugin/lifestealz/versions>https://modrinth.com/plugin/lifestealz/versions</click>"
 usageError: "&cUsage: %usage%"
 noPermsError: "<red>You do not have permission to execute this command!"
